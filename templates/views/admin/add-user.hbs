@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Jorhat Institute Of Science And Technology - JIST</title>
+
+    {{!-- Font Awesome Css --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+    {{!-- Bootstraps Css --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    {{!-- Custom Css --}}
+    <link rel="stylesheet" href="../css/admin.css">
+
+</head>
+
+
+<body style="background-color :grey ">
+
+{{!-- Navbar --}}
+<nav class="navbar navbar-expand-md navbar-light">
+
+
+    {{!-- TopNav --}}
+    <div class="col-lg-10  col-md-8 ml-auto bg-dark fixed-top py-2 top-navbar">
+        <div class="row align-items-center text- light">
+            <h4 class="px-4 text-light mb-2 mb-sm-0 pt-1">
+                <a class="  text- light">Home</a>
+                <span class=" text- light">/</span>
+                <span class=" text- light">Add Users</span>
+            </h4>
+            <button class="navbar-toggler ml-auto mb-2 bg-dark" type="button" data-toggle="collapse"
+                data-target="#myNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+
+
+    {{!-- Sidebar --}}
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+        {{!-- Heading --}}
+        <div class="col-lg-2 sidebar fixed-top col-md-4">
+            <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">Admin
+                Panel</a>
+            <div class="bottom-border pb-3">
+                <img src="../img/principal.jpg" width="50" class="rounded-circle mr-3" alt="principal">
+                <a class="text-white">Principal</a>
+            </div>
+
+            {{!-- Options --}}
+            <ul class="navbar-nav flex-column mt-2">
+                <li class="nav-item"><a href="/admin/dashboard" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                            class="fas fa-home text-light fa-lg mr-3"></i>Dashboard</a></li>
+                <li class="nav-item"><a href="/admin/addUser" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                            class="fas fa-user-plus text-light fa-lg mr-3"></i>Add</a></li>
+                <li class="nav-item"><a href="/admin/allUsers" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                            class="fas fa-table text-light fa-lg mr-3"></i>Veiw</a></li>
+                <li class="nav-item"><a href="/admin/feedbacks" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                            class="fas fa-envelope text-light fa-lg mr-3"></i>Feedback</a></li>
+                            <li class="nav-item"><a href="/admin/addNotice" class="nav-link text-white p-3 mb-2 sidebar-link"><i
+                                        class="fas fa-eye text-light fa-lg mr-3"></i>Notice</a></li>
+                <li class="nav-item"><a href="/admin/login" class="nav-link text-white p-3 mb-2 sidebar-link " ><i class="fas fa-sign-out-alt text-light fa-lg mr-3"></i>Log Out</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+{{!-- Register Form --}}
+<main class="pt-5 mx-lg-5 mb-3">
+    <div class="container-fluid bg-dark col-9 mr-5 py-1">
+        <h5 class="bg-info text-light text-center py-4">
+            <strong>Add User</strong>
+        </h5>
+
+        {{#if success_msg}}
+        <div class="alert alert-success my-4 text-center">{{success_msg}}</div>
+        {{/if}}
+        
+        {{#if error_msg}}
+        <div class="alert alert-danger my-4 text-center">{{error_msg}}</div>
+        {{/if}}
+    
+        {{!-- Form --}}
+        <form class="bg-dark text-light" action="" method="POST">
+        
+            <div class="row mt-4">
+
+                {{!-- User Name --}}
+                <div class="col">
+                    <div>
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="username" required>
+                    </div>
+                </div>
+
+                {{!-- Full Nmae --}}
+                <div class="col">
+                    <div>
+                        <label>Full name</label>
+                        <input type="text" class="form-control" name="fullname"  required>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row mt-4">
+
+               {{!-- E-mail --}}
+                <div class="col">
+                    <div>
+                        <label>E-mail</label>
+                        <input type="email" class="form-control" name="email" required>
+                    </div>
+                </div>
+
+                {{!-- Phone No. --}}
+                <div class="col">
+                    <div>
+                        <label>Phone No.</label>
+                        <input type="text" class="form-control" name="phone" required>
+                    </div>
+                </div>
+
+            </div>
+        
+
+            <div class="row mt-4">
+
+                {{!-- Father's name --}}
+                <div class="col">
+                    <div>
+                        <label>Father Name</label>
+                        <input type="text" class="form-control" name="father" required>
+                    </div>
+                </div>
+
+                {{!-- Course --}}
+                <div class="col">
+                    <div>
+                        <label>Course</label>
+                        <select class="form-control" name="course" required>
+                            <option value=" " disabled selected>Course</option>
+                            <option value="Bsc">Bsc</option>
+                            <option value="Msc">Msc</option>
+                            <option value="Engineering">Engineering</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row mt-4">
+
+                {{!-- Department --}}
+                <div class="col">
+                    <label>Department</label>
+                    <select class="form-control" name="department" required>
+                        <option value=" " disabled selected>Department</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="CS & IT">CS & IT</option>
+                        <option value="Mechanical">Mechanical</option>
+                        <option value="Civil">Civil</option>
+                        <option value="PEI">PEI</option>
+                        <option value="ETC">ETC</option>
+                    </select>
+                </div>
+
+                {{!-- Semester --}}
+                <div class="col">
+                    <label>Semester</label>
+                    <select class="form-control" name="semester" required>
+                        <option value="0" disabled selected>Semester</option>
+                        <option value="1">1st</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4th</option>
+                        <option value="5">5th</option>
+                        <option value="6">6th</option>
+                        <option value="7">7th</option>
+                        <option value="8">8th</option>
+                    </select>
+                </div>
+
+            </div>
+        
+            
+            <div class="row mt-4">
+
+                {{!-- Address --}}
+                <div class="col">
+                    <label>Address</label>
+                    <input type="text" class="form-control" name="address" required>
+                </div>
+
+                {{!-- Password --}}
+                <div class="col">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="password" required>
+                    <p>* Atleast 8 characters</p>
+                </div>
+
+            </div>
+        
+            {{!-- Sign up --}}
+            <center><button class="btn btn-info text-light btn-rounded my-4 waves-effect z-depth-0" type="submit">Register</button></center>
+        
+        </form>
+
+    </div>
+    
+</main>
+
+
+{{!-- Bootstraps Scripts --}}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "jistnode",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
+  },
+  "author": "Prabir Prasad",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hbs": "^4.0.6",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.7.11",
+    "multer": "^1.4.2",
+    "sharp": "^0.23.3",
+    "validator": "^12.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}

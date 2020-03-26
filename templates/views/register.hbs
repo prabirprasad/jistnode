@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>JORHAT INSTITUTE OF SCIENCE AND TECHNOLOGY - JIST</title>
+
+    {{!-- Font Awesome Css --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    
+    {{!-- Bootstraps Css --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    {{!-- Cutom Css --}}
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+</head>
+
+
+<body style="background-color :grey ">
+
+
+
+{{!-- Register Form --}}
+<main class="pt-3 px-5 mb-3">
+        <div class="bg-dark col-12 py-1">
+            <a HREF="/" class="float-left mt-2"><img class="logo" src="./img/jist.jpg" height="50" width="50" alt="logo"></a>
+            {{!-- Heading --}}
+            <h4 class="bg-info py-3 text-center text-light">Register Form</h4>
+
+
+            <form class="bg-dark text-light" action="" method="POST">
+                
+                <div class="row mt-4">
+                
+                    {{!-- User Name --}}
+                    <div class="col">
+                        <div>
+                            <label>Username</label>
+                            <input type="text" id="myInput1" class="form-control" placeholder="Enter Your User Name" name="username" required>
+                        </div>
+                    </div>
+                
+                    {{!-- Full Nmae --}}
+                    <div class="col">
+                        <div>
+                            <label>Full name</label>
+                            <input type="text" id="myInput2" class="form-control" placeholder="Enter Your Full Name" name="fullname" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                
+                    {{!-- E-mail --}}
+                    <div class="col">
+                        <div>
+                            <label>E-mail</label>
+                            <input type="email" id="myInput3" class="form-control" placeholder="Enter Your E-mail" name="email" required>
+                        </div>
+                    </div>
+                
+                    {{!-- Phone No. --}}
+                    <div class="col">
+                        <div>
+                            <label>Phone No.</label>
+                            <input type="text" id="myInput4" class="form-control" placeholder="Enter Your Phone No." minlength="10" maxlength="10" name="phone" required>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="row mt-4">
+                
+                    {{!-- Father's name --}}
+                    <div class="col">
+                        <div>
+                            <label>Father's Name</label>
+                            <input type="text" id="myInput5" class="form-control" placeholder="Enter Your Father's Name" name="father" required>
+                        </div>
+                    </div>
+                
+                    {{!-- Course --}}
+                    <div class="col">
+                        <div>
+                            <label>Course</label>
+                            <select class="form-control" id="myInput6" name="course" required>
+                                <option value=" " disabled selected>Course</option>
+                                <option value="Bsc">Bsc</option>
+                                <option value="Msc">Msc</option>
+                                <option value="Engineering">Engineering</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="row mt-4">
+                
+                    {{!-- Department --}}
+                    <div class="col">
+                        <label>Department</label>
+                        <select class="form-control" id="myInput7" name="department" required>
+                            <option value=" " disabled selected>Department</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="CS & IT">CS & IT</option>
+                            <option value="Mechanical">Mechanical</option>
+                            <option value="Civil">Civil</option>
+                            <option value="PEI">PEI</option>
+                            <option value="ETC">ETC</option>
+                        </select>
+                    </div>
+                
+                    {{!-- Semester --}}
+                    <div class="col">
+                        <label>Semester</label>
+                        <select class="form-control" id="myInput8" name="semester" required>
+                            <option value="0" disabled selected>Semester</option>
+                            <option value="1">1st</option>
+                            <option value="2">2nd</option>
+                            <option value="3">3rd</option>
+                            <option value="4">4th</option>
+                            <option value="5">5th</option>
+                            <option value="6">6th</option>
+                            <option value="7">7th</option>
+                            <option value="8">8th</option>
+                        </select>
+                    </div>
+                
+                </div>
+
+                <div class="row mt-4">
+                
+                    {{!-- Address --}}
+                    <div class="col">
+                        <label>Address</label>
+                        <input type="text" id="myInput9" class="form-control" placeholder="Enter Your Address" name="address" required>
+                    </div>
+                
+                    {{!-- Password --}}
+                    <div class="col">
+                        <label>Password</label>
+                        <input type="password" id="myInput10" class="form-control" placeholder="Enter Your Password" name="password" required>
+                        <p>* Atleast 8 characters</p>
+                    </div>
+                
+                </div>
+                
+                <div class="row mt-4">
+
+                    <div class="col text-center">
+
+                    {{!-- Cancel --}}
+                    <button class="btn btn-primary my-4" onclick="myInput()">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    {{!-- Register --}}
+                
+                    <button class="btn btn-primary my-4" type="submit">Register</button>
+
+                    </div>
+
+                </div>
+                
+                <center>
+                <p>By clicking
+                    <em>Sign up</em> you agree to our
+                    <a href="" target="_blank" class="text-info">terms of service</a>
+                </p>
+                </center>
+
+            </form>
+        </div>
+</main>
+
+
+<script type="text/javascript">
+    function myInput() {
+        document.getElementById("myInput1").value = ""
+        document.getElementById("myInput2").value = ""
+        document.getElementById("myInput3").value = ""
+        document.getElementById("myInput4").value = ""
+        document.getElementById("myInput5").value = ""
+        document.getElementById("myInput6").value = ""
+        document.getElementById("myInput7").value = ""
+        document.getElementById("myInput8").value = ""
+        document.getElementById("myInput9").value = ""
+        document.getElementById("myInput10").value = ""
+    }
+</script>
+
+{{!-- Bootstraps Scripts --}}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+
+
+</html>

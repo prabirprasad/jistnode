@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>JORHAT INSTITUTE OF SCIENCE AND TECHNOLOGY - JIST</title>
+
+    {{!-- Cutom Css --}}
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+
+    {{!-- Bootstraps --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    {{!-- Font Awesome Css --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+
+</head>
+
+
+<body style="background-color :grey ">
+
+{{!-- Navbar --}}
+{{!-- {{>header}}  --}}
+
+
+{{!-- Jumbotron --}}
+<div class="text-danger text-center" style="background-image: url('./img/image02.jpg'); width:100%; opacity: 0.5; height: 140px; z-index: 1">
+    <h2 class="card-title h1-responsive pt-3 mb-4 font-weight-bold"><strong> Leave a Feedback</strong></h2>
+</div>
+
+<p class="text-light text-center font-bold font-weight-bold mt-2">
+    Have a query or Suggestion for us. Please Write them to us.
+    We'll love to hear from you.
+</p>
+
+    <center>
+    <div class="col-md-4 mt-3 bg-dark"><br>
+        <a HREF="/" class="float-left mt-2"><img class="logo" src="./img/jist.jpg" height="50" width="50" alt="logo"></a>
+
+        
+        
+        <h4 class="text-center text-light bg-info py-4">Feedback Form</h4>
+
+        {{#if success_msg}}
+        <div class="alert alert-success my-4 text-center">{{success_msg}}</div>
+        {{/if}}
+
+        <form action="" method="POST">
+            
+            <br>
+            {{!-- User Name --}}
+            <div>
+                <label class="float-left text-light">Full Name</label>
+                <input type="text" class="form-control" placeholder="Enter your Full Name" name="fullname" required>
+            </div>
+
+            {{!-- E-mail --}}
+            <div>
+                <div>
+                    <label class="float-left text-light">E-mail</label>
+                    <input type="email" class="form-control" placeholder="Enter your E-mail" name="email" required>
+                </div>
+            </div>
+
+            {{!-- Message --}}
+            <div>
+                <label class="float-left text-light">Message</label>
+                <textarea type="text" class="form-control" placeholder="Enter What You Feel" rows="3"  name="message" required> </textarea>
+            </div>
+
+
+            {{!-- Cancel --}}
+            <a  href="/" class="btn btn-primary mt-4 mb-2">Cancel</a>&nbsp;&nbsp;&nbsp;
+
+            {{!-- Sign In --}}
+            <button type="submit" class="btn btn-primary mt-4 mb-2">Send</button>
+
+        </form>
+    </div>
+    </center>
+
+
+
+
+{{!-- Footer --}}
+{{!-- {{>footer}} --}}
+
+</body>
+
+
+</html>
