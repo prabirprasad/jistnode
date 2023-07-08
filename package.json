@@ -9,7 +9,7 @@
   "author": "Prabir Prasad",
   "license": "ISC",
   "dependencies": {
-    "@sendgrid/mail": "^6.4.0",
+    "@sendgrid/mail": "^7.7.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
